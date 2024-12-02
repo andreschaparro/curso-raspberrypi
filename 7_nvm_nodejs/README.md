@@ -78,3 +78,5 @@ Como resultado, se crea el archivo `package.json`.
 3. Agregar un script llamado `dev` que ejecute `nodemon src/app.js`.
 4. Ejecutar `npm start`.
 5. Ejecutar `npm run dev`.
+
+![npm run dev](4.png)
