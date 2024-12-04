@@ -1,3 +1,3 @@
-# Curso práctico de Raspberry Pi donde se desarrolla progresivamente una aplicación de IoT
+# Curso de Raspberry Pi
 
 Autor: Ing. Andrés Chaparro
