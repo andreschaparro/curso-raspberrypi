@@ -59,7 +59,7 @@
 1. Ejecutar `cd ..`.
 2. Ejecutar `cd ..`.
 3. Ejecutar `touch compose.yaml`.
-4. Modificar el contenido del `compose.yaml`:
+4. Modificar el contenido de `compose.yaml`:
 
 ![compose.yaml](4.png)
 
