@@ -1,6 +1,6 @@
-# Capítulo 6: git y GitHub en la Raspberry Pi
+# Capítulo 6: Git y GitHub en la Raspberry Pi
 
-## Instalar git
+## Instalar Git
 
 1. Abrir la terminal de la Raspberry Pi desde Visual Studio Code.
 2. Ejecutar `sudo apt install git`.
@@ -9,7 +9,7 @@
 
 📝[Git Cheat Sheet](https://training.github.com/downloads/github-git-cheat-sheet.pdf).
 
-## Configurar git
+## Configurar Git
 
 1. Abrir la terminal de la Raspberry Pi desde Visual Studio Code.
 2. Ejecutar `git config --global user.name "username"`.

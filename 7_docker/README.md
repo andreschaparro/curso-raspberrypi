@@ -16,12 +16,13 @@
 
 ## Verificar el funcionamiento de Docker
 
-1. Abrir la terminal de la Raspberry Pi desde Visual Studio Code.
-2. Ejecutar `docker run hello-world`.
+1. Ejecutar `docker run --name hello-world hello-world.
 
 ![docker run hello-world](1.png)
 
-3. Ejecutar `docker compose version`.
+2. Ejecutar `docker rm hello-world`.
+3. Ejecutar `docker rmi hello-world`.
+4. Ejecutar `docker compose version`.
 
 ![docker compose version](2.png)
 

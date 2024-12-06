@@ -1,4 +1,4 @@
-# Capítulo 10: MongoDB con Docker en la Raspberry Pi
+# Capítulo 9: MongoDB con Docker en la Raspberry Pi
 
 ## Obtener la última versión de MongoDB que es compatible con nuestra Raspberry Pi
 
@@ -22,7 +22,8 @@
 6. Ejecutar `mkdir data`.
 7. Ejecutar `touch Dockerfile`.
 8. Ver el sistema de archivos de la Raspberry Pi desde Visual Studio Code.
-9. Modificar el contenido del `Dockerfile`:
+9. Abrir el archivo `Dockerfile`.
+10. Modificar el contenido del `Dockerfile`:
 
 ![Dockerfile](2.png)
 
@@ -33,7 +34,8 @@
 1. Ejecutar `cd ..`.
 2. Ejecutar `cd ..`.
 3. Ejecutar `touch .env`.
-4. Modificar el contenido de `.env`:
+4. Abrir el archivo `.env`.
+5. Modificar el contenido de `.env`:
 
 ![.env](3.png)
 

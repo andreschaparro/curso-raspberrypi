@@ -1,4 +1,4 @@
-# Capítulo 1: Hardware
+# Capítulo 1: Hardware Recomendable
 
 ## Raspberry Pi 3 B+
 

@@ -44,7 +44,8 @@
 
 1. Ejecutar `cd ..`.
 2. Ejecutar `touch Dockerfile`.
-3. Modificar el contenido del `Dockerfile`:
+3. Abrir el archivo `Dockerfile`.
+4. Modificar el contenido del `Dockerfile`:
 
 ![Dockerfile](3.png)
 
@@ -59,7 +60,8 @@
 1. Ejecutar `cd ..`.
 2. Ejecutar `cd ..`.
 3. Ejecutar `touch compose.yaml`.
-4. Modificar el contenido de `compose.yaml`:
+4. Abrir el archivo `compose.yaml`.
+5. Modificar el contenido de `compose.yaml`:
 
 ![compose.yaml](4.png)
 
@@ -69,7 +71,7 @@
 
 1. Ejecutar `docker compose up -d`.
 
-## Subscribirse a un topic y publicar mensajes desde nuestra PC
+## Subscribirse a un topic y publicar un mensaje desde nuestra PC
 
 1. Abrir una terminal de Windows.
 2. Ejecutar `mosquitto_sub -d -h "XXX.XXX.XXX.XXX" -p "1883" -t "v1/devices/telemetry"`. Donde `XXX.XXX.XXX.XXX` es la dirección IP de la Raspberry Pi.
@@ -82,6 +84,6 @@
 
 📝[mosquitto_pub man page](https://mosquitto.org/man/mosquitto_pub-1.html).
 
-## Detener los contenedores de Docker
+## Detener y borrar los contenedores de Docker
 
-1. Ejecutar `docker compose stop`.
+1. Ejecutar `docker compose down --rmi all`.

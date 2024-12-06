@@ -1,6 +1,6 @@
-# Capítulo 9: nvm y nodejs en la Raspberry Pi
+# Capítulo 10: NVM y Node en la Raspberry Pi
 
-## Instalar nvm
+## Instalar NVM
 
 1. Abrir la terminal de la Raspberry Pi desde Visual Studio Code.
 2. Ejecutar `curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash`.
@@ -12,7 +12,7 @@
 
 📝[nvm](https://github.com/nvm-sh/nvm).
 
-## Instalar la última versión LTS de nodejs con nvm
+## Instalar la última versión LTS de Node con NVM
 
 1. Ejecutar `nvm install 22.11.0`.
 2. Ejecutar `nvm use 22.11.0`.
