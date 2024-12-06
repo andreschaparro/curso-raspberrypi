@@ -18,4 +18,4 @@
 2. Ejecutar `nvm use 22.11.0`.
 3. Ejecutar `node -v`.
 
-![nodejs](2.png)
+![node](2.png)
