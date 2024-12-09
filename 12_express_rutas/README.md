@@ -135,6 +135,8 @@ app.listen(port, () => {
 
 ## Prueba de funcionamiento con Postman desde nuestra PC
 
+1. Instalar [Postman](https://www.postman.com/downloads/).
+
 ![getAllDevices](1.png)
 
 ![getDeviceById](2.png)
