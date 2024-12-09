@@ -78,7 +78,7 @@ app.listen(port, ()=> {
 
 ## Prueba de funcionamiento de Node y Express desde nuestra PC
 
-1. Ejecutar node en modo desarrollo o producción.
+1. Ejecutar Node en modo desarrollo o producción.
 2. Abrir el navegador [Google Chrome](https://www.google.com/chrome).
 3. Ingresar la dirección: `http://XXX.XXX.XXX.XXX:3000`. Donde `XXX.XXX.XXX.XXX` es la dirección IP de la Raspberry Pi.
 
