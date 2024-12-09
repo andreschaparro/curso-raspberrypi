@@ -14,7 +14,7 @@
 
 📝[Linux post-installation steps for Docker Engine](https://docs.docker.com/engine/install/linux-postinstall/).
 
-## Verificar el funcionamiento de Docker
+## Probar el funcionamiento de Docker
 
 1. Ejecutar `docker run --name hello-world hello-world.
 

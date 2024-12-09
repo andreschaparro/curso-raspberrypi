@@ -76,7 +76,7 @@ app.listen(port, ()=> {
 
 ![npm start](4.png)
 
-## Prueba de funcionamiento de Node y Express desde nuestra PC
+## Probar el funcionamiento Node y Express desde nuestra PC
 
 1. Ejecutar Node en modo desarrollo o producción.
 2. Abrir el navegador [Google Chrome](https://www.google.com/chrome).

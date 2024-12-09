@@ -133,7 +133,7 @@ app.listen(port, () => {
 })
 ```
 
-## Prueba de funcionamiento con Postman desde nuestra PC
+## Probar las rutas con Postman desde nuestra PC
 
 1. Instalar [Postman](https://www.postman.com/downloads/).
 
@@ -164,5 +164,3 @@ app.listen(port, () => {
 ![updateAction](13.png)
 
 ![Raspberry Pi](14.png)
-
-

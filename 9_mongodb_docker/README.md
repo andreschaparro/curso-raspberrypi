@@ -50,7 +50,7 @@
 
 ![compose.yaml](4.png)
 
-## Prueba de conexión con MongoDB Compass desde nuestra PC
+## Probar la conexión con MongoDB Compass desde nuestra PC
 
 1. Instalar [MongoDB Compass](https://www.mongodb.com/try/download/compass).
 
