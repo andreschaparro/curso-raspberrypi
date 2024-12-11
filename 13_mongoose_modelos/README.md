@@ -69,7 +69,8 @@ const actionSchema = new Schema({
     device: String,
     command: String,
     parameter: String,
-    ts: Date
+    ts: Date,
+    user: String
 })
 
 export const Action = model("Action", actionSchema)

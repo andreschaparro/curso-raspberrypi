@@ -17,28 +17,26 @@
 
 ![getAllDevices](3.png)
 
-![getOneDevice](4.png)
+![Colección devices](4.png)
 
-![Colección devices](5.png)
+![updateTelemetry](5.png)
 
-![updateTelemetry](6.png)
+![getAllTelemetries](6.png)
 
-![getAllTelemetries](7.png)
+![getOneDayTelemetries](7.png)
 
-![getOneDayTelemetries](8.png)
+![getFromToTelemetries](8.png)
 
-![getFromToTelemetries](9.png)
+![getLastTelemetry](9.png)
 
-![getLastTelemetry](10.png)
+![Colección telemetry](10.png)
 
-![Colección telemetry](11.png)
+![createAction](11.png)
 
-![createAction](12.png)
+![getAllActions](12.png)
 
-![getAllActions](13.png)
+![getOneDayActions](13.png)
 
-![getOneDayActions](14.png)
+![getFromToActions](14.png)
 
-![getFromToActions](15.png)
-
-![Colección actions](16.png)
+![Colección actions](15.png)

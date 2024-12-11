@@ -40,22 +40,6 @@ export const getAllDevices = async (req, res) => {
     }
 }
 
-export const getOneDevice = async (req, res) => {
-    const { name } = req.params
-
-    try {
-        const device = await Device.findOne({ name })
-
-        if (!device) {
-            return res.status(404).json({ message: "No se encontró el dispositivo" })
-        }
-
-        res.json(device)
-    } catch (error) {
-        res.status(500).json({ message: error.message || "Error al solicitar el dispositivo" })
-    }
-}
-
 export const createDevice = async (req, res) => {
     const { name, type } = req.body
 
@@ -273,7 +257,7 @@ export const getFromToActions = async (req, res) => {
 }
 
 export const createAction = async (req, res) => {
-    const { device, command, parameter } = req.body
+    const { device, command, parameter, user } = req.body
 
     try {
         const ts = new Date()
@@ -282,7 +266,8 @@ export const createAction = async (req, res) => {
             device,
             command,
             parameter,
-            ts
+            ts,
+            user
         })
 
         const newAction = await action.save()
