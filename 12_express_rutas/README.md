@@ -1,4 +1,4 @@
-# Capítulo 12: Manejo de rutas en Express
+# Capítulo 12: Rutas en Express
 
 ## Crear un archivo JS para cada grupo de rutas
 
@@ -19,23 +19,13 @@
 
 ```
 import { Router } from "express"
+import { getAllDevices, getOneDevice, createDevice } from "../controllers/device.controller.js"
 
 export const deviceRouter = Router()
 
-deviceRouter.get("/", (req, res) => {
-    console.log("Llama a getAllDevices")
-    res.status(200).send("Devuelve todos los dispositivos")
-})
-
-deviceRouter.get("/:id", (req, res) => {
-    console.log(`Llama a getDeviceById con el id ${req.params.id}`)
-    res.status(200).send("Devuelve un dispositivo")
-})
-
-deviceRouter.post("/", (req, res) => {
-    console.log("Llama a createDevice")
-    res.status(201).send("Registra un dispositivo")
-})
+deviceRouter.get("/", getAllDevices)
+deviceRouter.get("/:name", getOneDevice)
+deviceRouter.post("/", createDevice)
 ```
 
 ## Crear las rutas en telemetry.routes.js
@@ -45,33 +35,15 @@ deviceRouter.post("/", (req, res) => {
 
 ```
 import { Router } from "express"
+import { getLastTelemetry, getAllTelemetries, getOneDayTelemetries, getFromToTelemetries, updateTelemetry } from "../controllers/telemetry.controller.js"
 
 export const telemetryRouter = Router()
 
-telemetryRouter.get("/last/:id", (req, res) => {
-    console.log(`LLama a getLatestTelemetryById con el id ${req.params.id}`)
-    res.status(200).send("Devuelve la última telemetría de un dispositivo")
-})
-
-telemetryRouter.get("/:id", (req, res) => {
-    console.log(`LLama a getAllTelemetriesById con el id ${req.params.id}`)
-    res.status(200).send("Devuelve todas las telemetrías de un dispositivo")
-})
-
-telemetryRouter.get("/:id/:day", (req, res) => {
-    console.log(`Llama a getOneDayTelemetriesById con el id ${req.params.id} para el día ${req.params.day}`)
-    res.status(200).send("Devuelve las telemetrías de un dispositivo durante un día")
-})
-
-telemetryRouter.get("/:id/:from/:to", (req, res) => {
-    console.log(`Llama a getFromToTelemetriesById con el id ${req.params.id} desde el día ${req.params.from} hasta el ${req.params.to}`)
-    res.status(200).send("Devuelve las telemetrías de un dispositivo desde un día hasta otro")
-})
-
-telemetryRouter.put("/", (req, res) => {
-    console.log("LLama a updateTelemetry")
-    res.status(200).send("Guarda la telemetría de un dispositivo")
-})
+telemetryRouter.get("/last/:device", getLastTelemetry)
+telemetryRouter.get("/:device", getAllTelemetries)
+telemetryRouter.get("/:device/:day", getOneDayTelemetries)
+telemetryRouter.get("/:device/:from/:to", getFromToTelemetries)
+telemetryRouter.put("/", updateTelemetry)
 ```
 
 ## Crear las rutas en action.routes.js
@@ -81,33 +53,14 @@ telemetryRouter.put("/", (req, res) => {
 
 ```
 import { Router } from "express"
+import { getAllActions, getOneDayActions, getFromToActions, createAction } from "../controllers/action.controller.js"
 
 export const actionRouter = Router()
 
-actionRouter.get("/last/:id", (req, res) => {
-    console.log(`LLama a getLatestActionById con el id ${req.params.id}`)
-    res.status(200).send("Devuelve la última acción de un dispositivo")
-})
-
-actionRouter.get("/:id", (req, res) => {
-    console.log(`LLama a getAllActionsById con el id ${req.params.id}`)
-    res.status(200).send("Devuelve todas las acciones de un dispositivo")
-})
-
-actionRouter.get("/:id/:day", (req, res) => {
-    console.log(`Llama a getOneDayActionsById con el id ${req.params.id} para el día ${req.params.day}`)
-    res.status(200).send("Devuelve las acciones de un dispositivo durante un día")
-})
-
-actionRouter.get("/:id/:from/:to", (req, res) => {
-    console.log(`Llama a getFromToActionsById con el id ${req.params.id} desde el día ${req.params.from} hasta el ${req.params.to}`)
-    res.status(200).send("Devuelve las acciones de un dispositivo desde un día hasta otro")
-})
-
-actionRouter.put("/", (req, res) => {
-    console.log("LLama a updateAction")
-    res.status(200).send("Guarda la acción de un dispositivo")
-})
+actionRouter.get("/:device", getAllActions)
+actionRouter.get("/:device/:day", getOneDayActions)
+actionRouter.get("/:device/:from/:to", getFromToActions)
+actionRouter.post("/", createAction)
 ```
 
 ## Modificar el entry point
@@ -132,35 +85,3 @@ app.listen(port, () => {
     console.log(`La API esta funcionando en el puerto ${port}`)
 })
 ```
-
-## Probar las rutas con Postman desde nuestra PC
-
-1. Instalar [Postman](https://www.postman.com/downloads/).
-
-![getAllDevices](1.png)
-
-![getDeviceById](2.png)
-
-![createDevice](3.png)
-
-![getAllTelemetriesById](4.png)
-
-![getOneDayTelemetriesById](5.png)
-
-![getFromToTelemetriesById](6.png)
-
-![getLatestTelemetryById](7.png)
-
-![updateTelemetry](8.png)
-
-![getAllActionsById](9.png)
-
-![getOneDayActionsById](10.png)
-
-![getFromToActionsById](11.png)
-
-![getLatestActionById](12.png)
-
-![updateAction](13.png)
-
-![Raspberry Pi](14.png)

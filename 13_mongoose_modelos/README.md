@@ -1,4 +1,4 @@
-# Capítulo 13: Creación de modelos para MongoDB con Mongoose
+# Capítulo 13: Modelado de colecciones con Mongoose
 
 ## Instalar las dependencias de producción
 
@@ -25,15 +25,14 @@
 
 ```
 import mongoose from "mongoose"
+const { Schema, model } = mongoose
 
-const deviceSchema = new mongoose.Schema(
-    {
-        name: String,
-        type: String
-    }
-)
+const deviceSchema = new Schema({
+    name: String,
+    type: String
+})
 
-export const deviceModel = mongoose.model("Device", deviceSchema)
+export const Device = model("Device", deviceSchema)
 ```
 
 ## Crear el modelo en telemetry.model.js
@@ -43,19 +42,18 @@ export const deviceModel = mongoose.model("Device", deviceSchema)
 
 ```
 import mongoose from "mongoose"
+const { Schema, model } = mongoose
 
-const telemetrySchema = new mongoose.Schema(
-    {
-        day: Date,
-        device: String,
-        nsamples: Number,
-        first: Number,
-        last: Number,
-        telemetry: JSON
-    }
-)
+const telemetrySchema = new Schema({
+    day: Date,
+    device: String,
+    nsamples: Number,
+    first: Number,
+    last: Number,
+    telemetry: JSON
+})
 
-export const telemetryModel = mongoose.model("Telemetry", telemetrySchema)
+export const Telemetry = model("Telemetry", telemetrySchema)
 ```
 
 ## Crear el modelo en action.model.js
@@ -65,17 +63,16 @@ export const telemetryModel = mongoose.model("Telemetry", telemetrySchema)
 
 ```
 import mongoose from "mongoose"
+const { Schema, model } = mongoose
 
-const actionSchema = new mongoose.Schema(
-    {
-        device: String,
-        command: String,
-        parameter: String,
-        ts: Date
-    }
-)
+const actionSchema = new Schema({
+    device: String,
+    command: String,
+    parameter: String,
+    ts: Date
+})
 
-export const actionModel = mongoose.model("Action", actionSchema)
+export const Action = model("Action", actionSchema)
 ```
 
 ## Modificar el entry point
@@ -98,9 +95,9 @@ const connectToMongoDB = async () => {
         await mongoose.connect("mongodb://user:pass@localhost:27017/", {
             dbName: "iot"
         })
-        console.log("La API se conectó a la base de datos de MongoDB")
+        console.log("La API se conectó a MongoDB")
     } catch (error) {
-        console.error(`Falló la conexión a la base de datos de MongoDB: ${error}`)
+        console.error(`Falló la conexión de la API a MongoDB: ${error}`)
     }
 }
 
@@ -114,11 +111,3 @@ app.listen(port, () => {
     console.log(`La API esta funcionando en el puerto ${port}`)
 })
 ```
-
-## Probar la conexión entre la API y MongoDB
-
-1. Ejecutar `cd ..`.
-2. Ejecutar `docker compose up -d`.
-3. Ejecutar Node en modo desarrollo o producción.
-
-![Conexión de la API con MongoDB](1.png)
