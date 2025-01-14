@@ -16,7 +16,7 @@
 
 ## Probar el funcionamiento de Docker
 
-1. Ejecutar `docker run --name hello-world hello-world.
+1. Ejecutar `docker run --name hello-world hello-world`.
 
 ![docker run hello-world](1.png)
 
